@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Cutive&family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+}
+body {
+  background-color: #eeeeee;
+}
+p {
+  @apply my-6;
+}
+a {
+  @apply border-b border-transparent border-dashed;
+}
+a:hover {
+  @apply border-black;
+}
+.cta:hover {
+  transform: scale(1.03);
+}
+input:invalid {
+  box-shadow: none !important;
+  border: none !important;
+  outline: dotted 1px rgba(255, 0, 0, 0.4);
+}
+@tailwind components;
