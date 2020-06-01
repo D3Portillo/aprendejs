@@ -50,8 +50,7 @@
       <form
         @submit="handleRequest"
         class="border-2 block p-10 mt-16 z-1 email-octopus-form"
-        method="post"
-        action="https://emailoctopus.com/lists/e0973809-a25a-11ea-a3d0-06b4694bee2a/members/embedded/1.3/add"
+        action="/"
       >
         <div class="font-title text-2xl">
           ¡Aprendamos javascript juntos!
@@ -114,15 +113,18 @@ export default {
   methods: {
     handleRequest(e) {
       e.preventDefault()
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: [...e.currentTarget.querySelectorAll("input")]
-          .map(({ value, name }) => {
-            return encodeURIComponent(name) + "=" + encodeURIComponent(value)
-          })
-          .join("&"),
-      })
+      fetch(
+        "https://emailoctopus.com/lists/e0973809-a25a-11ea-a3d0-06b4694bee2a/members/embedded/1.3/add",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: [...e.currentTarget.querySelectorAll("input")]
+            .map(({ value, name }) => {
+              return encodeURIComponent(name) + "=" + encodeURIComponent(value)
+            })
+            .join("&"),
+        }
+      )
         .then(() => {
           window.location.href = "/gracias"
         })
