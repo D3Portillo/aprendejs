@@ -1,12 +1,13 @@
 <template>
   <div>
-    <div v-for="profile in profiles" :key="profile.id"></div>
+    <div v-for="profile in profiles" :key="profile.email"></div>
   </div>
 </template>
 
 <script>
 const PAYLOAD = [
   {
+    id: "ID",
     name: "Ejemplo",
     email: "email@ejemplo.com",
     cert:
@@ -24,7 +25,7 @@ export default {
     fetch(`https://aprendejs.email/.netlify/functions/certs`)
       .then((r) => r.json())
       .then((data) => {
-        //console.log
+        console.log(data)
       })
   },
 }

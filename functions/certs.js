@@ -26,6 +26,7 @@ exports.handler = (event, context, callback) => {
               })
               .map(
                 ({
+                  id,
                   fields: {
                     name = "Usuario",
                     email = "noemail@service.has",
@@ -34,6 +35,7 @@ exports.handler = (event, context, callback) => {
                   },
                 }) => {
                   return {
+                    id,
                     name,
                     email,
                     cert: cert[0].url,
@@ -49,5 +51,3 @@ exports.handler = (event, context, callback) => {
       .catch(voidData)
   } else voidData()
 }
-
-
