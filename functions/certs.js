@@ -39,8 +39,8 @@ exports.handler = (event, context, callback) => {
                     name,
                     email,
                     cert: cert[0].url,
-                    picture: picture
-                      ? picture[0].url
+                    picture: Array.isArray(picture)
+                      ? picture[0].thumbnails.large.url
                       : `/images/no-profile.png`,
                   }
                 }

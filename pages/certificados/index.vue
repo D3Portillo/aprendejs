@@ -1,7 +1,20 @@
 <template>
-  <div>
-    <div v-for="profile in profiles" :key="profile.email"></div>
-  </div>
+  <table class="bg-white w-full">
+    <tbody>
+      <tr v-for="profile in profiles" :key="profile.id">
+        <td>
+          <div>
+            {{ profile.name }}
+          </div>
+          <img class="h-12" :src="profile.picture" :alt="profile.name" />
+        </td>
+        <td>
+          {{ profile.email }}
+          <a :href="'/certificados/' + profile.id">Ver certificado</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <script>
@@ -22,10 +35,11 @@ export default {
     }
   },
   mounted() {
+    const _this = this
     fetch(`https://aprendejs.email/.netlify/functions/certs`)
       .then((r) => r.json())
       .then((data) => {
-        console.log(data)
+        _this.profiles = data
       })
   },
 }
