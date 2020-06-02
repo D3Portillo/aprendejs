@@ -19,9 +19,35 @@ exports.handler = (event, context, callback) => {
       .then(({ records }) =>
         callback(null, {
           statusCode: 200,
-          body: JSON.stringify(records),
+          body: JSON.stringify(
+            records
+              .filter((e) => {
+                return Array.isArray(e.fields.cert)
+              })
+              .map(
+                ({
+                  fields: {
+                    name = "Usuario",
+                    email = "noemail@service.has",
+                    cert,
+                    picture,
+                  },
+                }) => {
+                  return {
+                    name,
+                    email,
+                    cert: cert[0].url,
+                    picture: picture
+                      ? picture[0].url
+                      : `/images/no-profile.png`,
+                  }
+                }
+              )
+          ),
         })
       )
       .catch(voidData)
   } else voidData()
 }
+
+
