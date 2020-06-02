@@ -25,5 +25,3 @@ exports.handler = (event, context, callback) => {
       .catch(voidData)
   } else voidData()
 }
-
-console.log(exports.handler(0, 0, console.log))
