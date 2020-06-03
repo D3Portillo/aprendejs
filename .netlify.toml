@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/certificados/*"
+  to = "https://aprendejs.email/.netlify/functions/certs"
+  status = 302
+  force = true

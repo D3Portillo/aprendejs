@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./pages/**/*.vue", "./components/**/*.vue", ".saber/pages/**/*.vue"],
+  purge: ["./pages/**/*.vue", "./components/**/*.vue"],
   theme: {
     colors: {
       white: "white",
@@ -7,7 +7,7 @@ module.exports = {
       black: "black",
       yellow: "#FFF50A",
       darker: "#eeeeee",
-      transparent: "rgba(0,0,0,0)"
+      transparent: "rgba(0,0,0,0)",
     },
     fontFamily: {
       title: ["Cutive", "Open Sans"],
