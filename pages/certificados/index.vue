@@ -2,15 +2,21 @@
   <table class="bg-white w-full">
     <tbody>
       <tr v-for="profile in profiles" :key="profile.id">
-        <td>
-          <div>
-            {{ profile.name }}
+        <td class="py-4 px-16 border-t border-darker">
+          <div class="inline-block">
+            <img
+              class="h-32 w-32 object-cover rounded"
+              :src="profile.picture"
+              :alt="profile.name"
+            />
+            <div class="text-xs text-center">{{ profile.email }}</div>
           </div>
-          <img class="h-12" :src="profile.picture" :alt="profile.name" />
         </td>
-        <td>
-          {{ profile.email }}
-          <a :href="'/certificados/' + profile.id">Ver certificado</a>
+        <td class="py-4 px-16 text-right border-t border-darker">
+          <div class="text-2xl">{{ profile.name }}</div>
+          <a class="text-xs" :href="'/certificados/' + profile.id"
+            >Ver reconocimiento</a
+          >
         </td>
       </tr>
     </tbody>
