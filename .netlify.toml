@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/certificados/*"
-  to = "/.netlify/functions/find-cert"
+  to = "/.netlify/functions/find-cert/?id=:splat"
   status = 301
-  force = false
+  force = true
