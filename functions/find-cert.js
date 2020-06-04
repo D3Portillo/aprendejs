@@ -13,8 +13,9 @@ exports.handler = (event, context, callback) => {
     })
   }
   if (TOKEN) {
-    const { q = "" } = event.queryStringParameters
-    const URL = `${BASE_URL}/${q}`
+    const id = event.path.split("/").pop()
+    const URL = `${BASE_URL}/${id}`
+    console.log(URL)
     fetch(URL, {
       headers: {
         Authorization: `Bearer ${TOKEN}`,
