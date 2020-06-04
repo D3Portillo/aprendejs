@@ -35,6 +35,7 @@ exports.handler = (event, context, callback) => {
                   "Content-type": "application/pdf",
                   "Access-Control-Allow-Origin": "*",
                 },
+                isBase64Encoded: true,
                 body,
               })
             })
