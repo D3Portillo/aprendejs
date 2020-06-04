@@ -24,14 +24,25 @@ exports.handler = (event, context, callback) => {
       .then((r) => r.json())
       .then(({ fields }) => {
         if (Array.isArray(fields.cert)) {
-          callback(null, {
-            statusCode: 302,
-            headers: {
-              Location: fields.cert[0].url,
-            },
-          })
+          fetch(fields.cert[0].url)
+            .then((r) => r.buffer())
+            .then((buff) => {
+              const body = buff.toString("base64")
+              console.log(body)
+              callback(null, {
+                statusCode: 200,
+                headers: {
+                  "Content-type": "application/pdf",
+                  "Access-Control-Allow-Origin": "*",
+                },
+                body,
+              })
+            })
+            .catch(voidData)
         } else voidData()
       })
       .catch(voidData)
   } else voidData()
 }
+
+exports.handler({ path: "algo/recu4u9BkgQaymT5J" }, null, console.log)
