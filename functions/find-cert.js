@@ -1,7 +1,7 @@
 const fetch = require("node-fetch")
 const { TOKEN = false } = process.env
 const BASE_URL = `https://api.airtable.com/v0/appU8sXkXLRsB7KVe/AprendeJS%20-%20Certificados`
-const NOT_FOUND_URL = `https://aprendejs.email/certificados/not-found/`
+const NOT_FOUND_URL = `https://aprendejs.email/certificados/not-found`
 exports.handler = (event, context, callback) => {
   const voidData = () => {
     callback(null, {
