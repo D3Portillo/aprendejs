@@ -3,20 +3,17 @@ const { TOKEN = false } = process.env
 const BASE_URL = `https://api.airtable.com/v0/appU8sXkXLRsB7KVe/AprendeJS%20-%20Certificados`
 const NOT_FOUND_URL = `https://aprendejs.email/certificados/not-found/`
 exports.handler = (event, context, callback) => {
-  console.log({ event, context })
-
-  const id = event.QueryStringParameters["q"]
   const voidData = () => {
-    const nothing = {
+    callback(null, {
       statusCode: 302,
       headers: {
         Location: NOT_FOUND_URL,
       },
-    }
-    callback(null, nothing)
+    })
   }
   if (TOKEN) {
-    const URL = `${BASE_URL}/${id}`
+    const { q = "" } = event.queryStringParameters
+    const URL = `${BASE_URL}/${q}`
     fetch(URL, {
       headers: {
         Authorization: `Bearer ${TOKEN}`,
