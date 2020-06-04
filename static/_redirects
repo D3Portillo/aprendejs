@@ -1,1 +1,1 @@
-/certificados/:id /.netlify/functions/find-cert/?q=:id 301!
+/certificados/:id /.netlify/functions/find-cert/?q=:id 302!
