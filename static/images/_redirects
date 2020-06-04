@@ -1,1 +1,0 @@
-/certificados/:id /.netlify/functions/find-cert/?q=:id 301!
