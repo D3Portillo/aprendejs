@@ -8,11 +8,11 @@ const embedPDF = ({ name = "Sín nombre", pdfURL, image, url }) => {
   const metas = [
     {
       name: "author",
-      content: title,
+      content: "AprendeJS",
     },
     {
       name: "keywords",
-      content: "fenixapp,gofenix,app_fenix,fenix_app,gym",
+      content: "javascript,aprendejs,coding",
     },
     {
       name: "description",
@@ -45,7 +45,7 @@ const embedPDF = ({ name = "Sín nombre", pdfURL, image, url }) => {
     },
     {
       name: "twitter:image:alt",
-      content: "gofenix.app",
+      content: "https://aprendejs.email",
     },
   ]
     .map(({ name, content }) => {
@@ -53,7 +53,7 @@ const embedPDF = ({ name = "Sín nombre", pdfURL, image, url }) => {
     })
     .join("\n")
 
-  return `<!DOCTYPE html><html><head><title>${title}</title>${metas}<style>body,html {margin: 0;padding: 0;height: 100%;overflow: hidden;}</style></head><body><iframe  width="100%" height="100%" src="${pdfURL}"/></body></html>
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${title}</title>${metas}<style>body,html {margin: 0;padding: 0;height: 100%;overflow: hidden;}</style></head><body><iframe  width="100%" height="100%" src="${pdfURL}"/></body></html>
   `
 }
 exports.handler = (event, context, callback) => {
@@ -76,7 +76,7 @@ exports.handler = (event, context, callback) => {
       },
     })
       .then((r) => r.json())
-      .then(({ fields, name }) => {
+      .then(({ fields }) => {
         if (Array.isArray(fields.cert)) {
           const pdf = fields.cert[0]
           callback(null, {
@@ -85,7 +85,7 @@ exports.handler = (event, context, callback) => {
               "Content-type": "text/html",
             },
             body: embedPDF({
-              name,
+              name: fields.name,
               pdfURL: pdf.url,
               image: pdf.thumbnails.large.url,
               url: `https://aprendejs.email/certificados/${id}`,
