@@ -10,21 +10,30 @@
         <a href="https://d3portillo.me">Denny Portillo</a>
       </p>
     </div>
-    <div class="w-full overflow-x-auto overflow-y-hidden" style="min-height: 70vh">
+    <div
+      class="w-full overflow-x-auto overflow-y-hidden"
+      style="min-height: 70vh"
+    >
       <table class="w-full">
         <tbody>
           <tr v-for="profile in profiles" :key="profile.id">
             <img
               :style="`filter: hue-rotate(${Math.random() * 360}deg)`"
               src="/images/item-bg.svg"
+              width="800"
+              height="158"
+              loading="lazy"
               class="absolute right-0 bottom-0"
               alt="-.-"
             />
             <td class="py-4 px-8 md:px-16 border-t border-darker z-1">
               <img
+                width="180"
+                height="180"
+                loading="lazy"
                 @load="addZoom"
                 style="cursor: pointer"
-                class="h-24 w-24 object-cover rounded z-20"
+                class="h-24 w-24 object-cover rounded z-20 bg-yellow text-sm shadow-inner"
                 :src="profile.picture"
                 :alt="profile.name"
               />

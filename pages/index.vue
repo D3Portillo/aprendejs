@@ -4,7 +4,14 @@
       <div
         class="flex items-center justify-center mb-16 lg:mb-12 pb-12 flex-wrap lg:flex-no-wrap border-b border-darker lg:border-transparent"
       >
-        <img class="h-56" src="/images/logo.png" alt="LOGO" />
+        <img
+          width="250"
+          height="250"
+          loading="lazy"
+          class="h-56"
+          src="/images/logo.png"
+          alt="💡"
+        />
         <div class="flex-grow text-center lg:text-right">
           <div class="font-title text-4xl">
             AprendeJS
@@ -95,7 +102,14 @@
             >
               SUSCRIBIRME
             </div>
-            <img src="/images/button.svg" alt="-" />
+            <img
+              src="/images/button.svg"
+              alt=" "
+              width="488"
+              height="150"
+              loading="lazy"
+              class="bg-black"
+            />
           </button>
         </div>
       </form>

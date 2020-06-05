@@ -58,6 +58,15 @@ module.exports = {
         color: "#656565",
       },
       img: {
+        animation: "load .75s forwards ease-in-out",
+        "@keyframes load": {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
         "@media (max-width: 600px)": {
           "max-width": "20rem !important",
         },
@@ -77,6 +86,15 @@ module.exports = {
         target.style.zIndex = 20
         zoom(target).open()
       },
+      "animationstart img": (_, target) => {
+        target.loading = "lazy"
+        target.style.filter = `blur(10px)`
+        target.setAttribute("loading", "lazy")
+      },
+      "animationend img": (_, target) => {
+        target.style.filter = `blur(0px)`
+        window.loadingDone()
+      },
     },
   },
   productSet: {
@@ -92,11 +110,6 @@ module.exports = {
     },
     templates: {
       pagination: "",
-    },
-    DOMEvents: {
-      "contentLoaded *": (_, target) => {
-        console.log(_, target)
-      },
     },
   },
   modalProduct: {

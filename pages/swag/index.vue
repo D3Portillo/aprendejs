@@ -1,22 +1,29 @@
 <template>
   <div class="w-full flex flex-col items-center overflow-hidden">
     <img
+      width="366"
+      height="736"
+      loading="lazy"
       class="w-full"
       style="min-width: 27rem"
       src="/images/swag.jpg"
       alt="Banner"
     />
-    <div
-      class="bg-white border-t border-darker pt-8 min-h-screen"
-      id="collection-component-1590880826855"
-    >
+    <div class="bg-white min-h-screen">
       <div
-        class="text-center pt-8 pb-16 mb-16 px-8 text-sm border-b border-darker"
+        class="text-center py-10 mb-16 px-8 text-sm border-b border-t border-darker"
       >
         AprendeJS, siempre, <b>siempre</b> será gratuito, puedes apoyar a
         mantenerlo así comprando stickers y swag. Además colaboras en promoverlo
         y así alcanzar mcuhas más personas 🙌.
       </div>
+      <div v-if="!doneLoading" class="text-center py-12 opacity-25 absolute w-full">
+        Cargando...
+      </div>
+      <div
+        id="collection-component-1590880826855"
+        :style="doneLoading || 'filter: blur(15px) hue-rotate(270deg)'"
+      />
     </div>
   </div>
 </template>
@@ -25,6 +32,11 @@ const options = require("../../shopify")
 import { getMetas } from "../../helpers"
 const title = `AprendeJS | Merch 💃`
 export default {
+  data(){
+    return {
+      doneLoading: false
+    }
+  },
   head: {
     meta: getMetas({
       title,
@@ -35,6 +47,9 @@ export default {
     title,
   },
   mounted() {
+    window.loadingDone = () => {
+      this.doneLoading = true
+    }
     function ShopifyBuyInit() {
       const client = ShopifyBuy.buildClient({
         domain: "d3portillo.myshopify.com",
