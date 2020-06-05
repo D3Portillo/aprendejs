@@ -44,6 +44,14 @@
         eventos importantes para mejorar las habilidades del mismo se enviarán a
         tu correo.
       </p>
+      <p>
+        Mirar el contenido del curso
+        <b
+          ><a href="https://github.com/D3Portillo/aprendejs/wiki/Contenido"
+            >acá</a
+          ></b
+        >.
+      </p>
       <form
         @submit="handleRequest"
         class="border-2 block p-10 mt-16 z-1 email-octopus-form"

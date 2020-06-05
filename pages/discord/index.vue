@@ -2,7 +2,7 @@
   <div class="bg-white">
     <div class="p-8">
       <div class="font-title text-4xl text-center">
-        DISCORD
+        Discord
       </div>
       <p class="text-center">
         Únete al server de discord de <b>#AprendeJS</b>, consulta dudas sobre
