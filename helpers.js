@@ -1,6 +1,6 @@
 const TITLE = `AprendeJS`
 const DESCRIPTION = `Aprendé Javascript desde tu email con un contenido previamente preparado y curado, además al completar recibirás un certificado válido por lo aprendido.`
-const IMAGE = "https://aprendejs.email/seo.jpg"
+const IMAGE = "/seo.jpg"
 export const getMetas = ({
   title = TITLE,
   description = DESCRIPTION,

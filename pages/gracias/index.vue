@@ -10,8 +10,38 @@
       <p>
         <b>Yaay estás dentro : )</b> , pero... para para iniciar a recibir
         emails de Javascript, necesito verificar tu email; para verificarlo
-        sigue las instrucciones enviadas a tu bandeja de entrada.
+        sigue las instrucciones enviadas a tu bandeja de entrada (PD: también
+        checa el Spam).
       </p>
     </div>
   </div>
 </template>
+
+<script>
+import zoom from "medium-zoom"
+import { getMetas } from "../../helpers"
+export default {
+  head: {
+    meta: getMetas({
+      title: "AprendeJS | Gracias :)",
+      image: "/images/yaay.gif",
+    }),
+  },
+  data() {
+    return {
+      profiles: [],
+    }
+  },
+  methods: {
+    addZoom: ({ target = null }) => zoom(target),
+  },
+  mounted() {
+    const _this = this
+    fetch(`https://aprendejs.email/.netlify/functions/certs`)
+      .then((r) => r.json())
+      .then((data) => {
+        _this.profiles = data
+      })
+  },
+}
+</script>

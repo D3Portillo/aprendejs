@@ -2,7 +2,7 @@
   <div class="w-full bg-white py-8">
     <div class="max-w-2xl mx-auto px-8">
       <div
-        class="flex items-center justify-center mb-16 lg:mb-12 flex-wrap lg:flex-no-wrap"
+        class="flex items-center justify-center mb-16 lg:mb-12 pb-12 flex-wrap lg:flex-no-wrap border-b border-darker lg:border-transparent"
       >
         <img class="h-56" src="/images/logo.png" alt="LOGO" />
         <div class="flex-grow text-center lg:text-right">
@@ -16,10 +16,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="max-w-2xl mx-auto px-8 pt-12 border-t border-darker lg:border-transparent"
-    >
+
       <p>
         Hola, mi nombre es Denny Portillo.<br />Cuando inicie en el mundo de
         Javascript, sentí que no sabía lo necesario para poder enseñar a otros a
@@ -35,18 +32,17 @@
         10 minutos.
       </p>
       <p>
-        Ciertos capítulos incluíran ejercicios con ejemplos, una guía y un
-        sistema de “tests” para aumentar el niver de complejidad por ejercicio.
-        Al completar recibirás un certificado en honor a todo lo aprendido en la
-        finalización de este. Puedes agregarlo a Linkedin o la plataforma de tu
-        gusto.
+        Ciertos capítulos incluíran ejercicios, guías y “tests” para aumentar el
+        niver de complejidad. Al completar recibirás un certificado en honor a
+        todo lo aprendido en la finalización de este. Puedes agregar el
+        certificado a Linkedin.
       </p>
       <p>
-        Estos cursos siempre y siempre serán gratuitos y para todos, tú correo
-        electrónico y nombre no se usará en otros servicios. Cuando te suscribas
-        al curso, a tu correo llegará solamente contenido relacionado al
-        aprendizaje de Javascript y eventos importantes para mejorar las
-        habilidades del mismo.
+        Estos cursos siempre y siempre serán gratuitos y para todo público,
+        <b>tú correo electrónico y nombre no se usará en otros servicios</b>. Al
+        suscribirte, solamente contenido sobre el aprendizaje de Javascript ó
+        eventos importantes para mejorar las habilidades del mismo se enviarán a
+        tu correo.
       </p>
       <form
         @submit="handleRequest"
@@ -63,9 +59,9 @@
           tabindex="-1"
           autocomplete="nope"
         />
-        <div class="mb-2 mt-12">
+        <label class="mb-2 mt-12 block" for="field_1">
           Tu nombre
-        </div>
+        </label>
         <input
           required
           type="text"
@@ -73,9 +69,9 @@
           placeholder="Juan Doe"
           class="bg-whiter w-full p-2 font-bold"
         />
-        <div class="mb-2 mt-6">
+        <label class="mb-2 mt-6 block" for="field_0">
           Correo electrónico
-        </div>
+        </label>
         <input
           required
           type="email"
@@ -102,7 +98,7 @@
         <a
           href="https://emailoctopus.com/?urli=NmBql&amp;utm_medium=user_referral&amp;utm_source=builder"
           target="_blank"
-          >EmailOctopus</a
+          >🐙 EmailOctopus</a
         >
       </div>
     </div>

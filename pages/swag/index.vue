@@ -14,8 +14,8 @@
         class="text-center pt-8 pb-16 mb-16 px-8 text-sm border-b border-darker"
       >
         AprendeJS, siempre, <b>siempre</b> será gratuito, puedes apoyar a
-        mantenerlo así comprando stickers y swag, con lo qué además colaboras en
-        promoverlo y poder así alcanzar mcuhas más personas 🙌.
+        mantenerlo así comprando stickers y swag. Además colaboras en promoverlo
+        y así alcanzar mcuhas más personas 🙌.
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@ export default {
     meta: getMetas({
       title,
       description: `Compra tu swag para apoyar a https://aprendejs.email 💓`,
-      image: "https://aprendejs.email/seo-swag.jpg",
+      image: "/seo-swag.jpg",
       url: "https://aprendejs.email/swag",
     }),
     title,

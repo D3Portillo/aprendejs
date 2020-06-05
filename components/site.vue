@@ -16,7 +16,8 @@
                 target="_blank"
                 >FAQ</a
               >
-              <router-link to="/">Inicio / About</router-link>
+              <router-link to="/discord">Discord</router-link>
+              <router-link to="/">Inicio / Home</router-link>
               <router-link to="/swag">Stickers & Swag</router-link>
               <router-link to="/certificados">Certificados</router-link>
             </div>
