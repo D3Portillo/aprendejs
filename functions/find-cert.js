@@ -3,8 +3,8 @@ const { TOKEN = false } = process.env
 const BASE_URL = `https://api.airtable.com/v0/appU8sXkXLRsB7KVe/AprendeJS%20-%20Certificados`
 const NOT_FOUND_URL = `https://aprendejs.email/certificados/not/found`
 const embedPDF = ({ name = "Sín nombre", pdfURL, image, url }) => {
-  const title = `AprendeJS | ${name} ~ Completado`
-  const description = `Felicidades haz completado el curso en https://aprendejs.email`
+  const title = `AprendeJS | ${name} ~ Curso completado`
+  const description = `${name} ha completado con éxito el curso de 20 capítulos #AprendeJS, via: https://aprendejs.email`
   const metas = [
     {
       name: "author",

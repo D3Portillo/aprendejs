@@ -2,7 +2,6 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Cutive&family=Open+Sans:wght@400;700&display=swap");
-
 * {
   font-family: "Open Sans", sans-serif;
   position: relative;
@@ -14,17 +13,28 @@ p {
   @apply my-6;
 }
 a {
-  @apply border-b border-transparent border-dashed;
+  @apply border-b border-transparent border-dashed z-1;
 }
-a:hover {
+a:not([no-link]):hover {
   @apply border-black;
 }
-.cta:hover {
+.cta:hover,
+a[no-link]:hover {
   transform: scale(1.03);
 }
 input:invalid {
   box-shadow: none !important;
   border: none !important;
+  outline: none;
+}
+input:invalid:focus {
   outline: dotted 1px rgba(255, 0, 0, 0.4);
 }
+a:not([no-link])::after {
+  content: " 💫";
+}
+.medium-zoom-overlay {
+  z-index: 10;
+}
+
 @tailwind components;

@@ -7,33 +7,34 @@
       alt="Banner"
     />
     <div
-      class="bg-white mt-4 pt-12 min-h-screen"
+      class="bg-white border-t border-darker pt-8 min-h-screen"
       id="collection-component-1590880826855"
     >
       <div
         class="text-center pt-8 pb-16 mb-16 px-8 text-sm border-b border-darker"
       >
         AprendeJS, siempre, <b>siempre</b> será gratuito, puedes apoyar a
-        mantenerlo así comprando stickers y swag para además colaborar en
-        promoverlo y alcanzar mcuhas más personas 🥳.
+        mantenerlo así comprando stickers y swag, con lo qué además colaboras en
+        promoverlo y poder así alcanzar mcuhas más personas 🙌.
       </div>
     </div>
   </div>
 </template>
 <script>
 const options = require("../../shopify")
+import { getMetas } from "../../helpers"
+const title = `AprendeJS | Merch 💃`
 export default {
+  head: {
+    meta: getMetas({
+      title,
+      description: `Compra tu swag para apoyar a https://aprendejs.email 💓`,
+      image: "https://aprendejs.email/seo-swag.jpg",
+      url: "https://aprendejs.email/swag",
+    }),
+    title,
+  },
   mounted() {
-    function loadScript() {
-      const script = document.createElement("script")
-      script.async = true
-      script.src = scriptURL
-      ;(
-        document.getElementsByTagName("head")[0] ||
-        document.getElementsByTagName("body")[0]
-      ).appendChild(script)
-      script.onload = ShopifyBuyInit
-    }
     function ShopifyBuyInit() {
       const client = ShopifyBuy.buildClient({
         domain: "d3portillo.myshopify.com",
@@ -48,13 +49,17 @@ export default {
         })
       })
     }
-    const scriptURL = `https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js`
-    if (window.ShopifyBuy) {
-      if (window.ShopifyBuy.UI) {
-        ShopifyBuyInit()
-      } else {
-        loadScript()
-      }
+    function loadScript() {
+      const scriptURL = `https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js`
+      const script = document.createElement("script")
+      script.async = true
+      script.src = scriptURL
+      document.head.appendChild(script)
+      script.onload = ShopifyBuyInit
+    }
+
+    if (window.ShopifyBuy?.UI) {
+      ShopifyBuyInit()
     } else {
       loadScript()
     }

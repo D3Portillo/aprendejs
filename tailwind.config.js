@@ -18,6 +18,8 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    borderStyle: ["hover"],
+  },
   plugins: [],
 }

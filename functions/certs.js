@@ -30,7 +30,6 @@ exports.handler = (event, context, callback) => {
                   fields: {
                     name = "Usuario",
                     email = "noemail@service.has",
-                    cert,
                     picture,
                   },
                 }) => {
@@ -38,7 +37,6 @@ exports.handler = (event, context, callback) => {
                     id,
                     name,
                     email,
-                    cert: cert[0].url,
                     picture: Array.isArray(picture)
                       ? picture[0].thumbnails.large.url
                       : `/images/no-profile.png`,

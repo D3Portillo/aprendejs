@@ -10,22 +10,23 @@
             AprendeJS
           </div>
           <div class="text-sm">
-            Aprende <b>Javascript</b> en tu email con contenido previamente
-            preparado y al completar recibirás un certificado válido por lo
-            aprendido.
+            Aprendé <b>Javascript</b> desde tu email con un contenido
+            previamente preparado y curado, además al completar recibirás un
+            certificado válido por lo aprendido.
           </div>
         </div>
       </div>
     </div>
-    <div class="h-4 bg-darker lg:hidden" />
-    <div class="max-w-2xl mx-auto px-8 pt-12">
+    <div
+      class="max-w-2xl mx-auto px-8 pt-12 border-t border-darker lg:border-transparent"
+    >
       <p>
         Hola, mi nombre es Denny Portillo.<br />Cuando inicie en el mundo de
         Javascript, sentí que no sabía lo necesario para poder enseñar a otros a
         hacer código con este lenguaje. Pero es tiempo de compartir lo que sé.
       </p>
       <p>
-        Este es un pequeño curso de 20 capitulos para aprender javascript, al
+        Este es un pequeño curso de 20 capítulos para aprender javascript, al
         terminar este curso ya habrás hecho tu primera aplicación web funcional
         con un URL personalizado.
       </p>
@@ -34,7 +35,7 @@
         10 minutos.
       </p>
       <p>
-        Ciertos capitulos incluíran ejercicios con ejemplos, una guía y un
+        Ciertos capítulos incluíran ejercicios con ejemplos, una guía y un
         sistema de “tests” para aumentar el niver de complejidad por ejercicio.
         Al completar recibirás un certificado en honor a todo lo aprendido en la
         finalización de este. Puedes agregarlo a Linkedin o la plataforma de tu
@@ -66,6 +67,7 @@
           Tu nombre
         </div>
         <input
+          required
           type="text"
           name="field_1"
           placeholder="Juan Doe"
@@ -108,8 +110,13 @@
 </template>
 
 <script>
+import { getMetas } from "../helpers"
+const title = `AprendeJS | Home`
 export default {
-  mounted() {},
+  head: {
+    meta: getMetas({ title }),
+    title,
+  },
   methods: {
     handleRequest(e) {
       e.preventDefault()

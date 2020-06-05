@@ -1,3 +1,5 @@
+//Context on this options are on client side (window, etc)
+const zoom = require("medium-zoom").default
 module.exports = {
   product: {
     styles: {
@@ -59,6 +61,7 @@ module.exports = {
         "@media (max-width: 600px)": {
           "max-width": "20rem !important",
         },
+        cursor: "pointer",
       },
     },
     buttonDestination: "modal",
@@ -69,6 +72,12 @@ module.exports = {
       button: "Ver producto",
     },
     googleFonts: ["Open Sans"],
+    DOMEvents: {
+      "click img": (_, target) => {
+        target.style.zIndex = 20
+        zoom(target).open()
+      },
+    },
   },
   productSet: {
     styles: {
@@ -77,12 +86,17 @@ module.exports = {
           "margin-left": "-30px",
         },
       },
-      collection:{
-        "padding": ".75rem 0 2.5rem 0"
-      }
+      collection: {
+        padding: ".75rem 0 2.5rem 0",
+      },
     },
     templates: {
       pagination: "",
+    },
+    DOMEvents: {
+      "contentLoaded *": (_, target) => {
+        console.log(_, target)
+      },
     },
   },
   modalProduct: {
