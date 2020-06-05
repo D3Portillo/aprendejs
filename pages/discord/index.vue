@@ -4,7 +4,7 @@
       <div class="font-title text-4xl text-center">
         DISCORD
       </div>
-      <p>
+      <p class="text-center">
         Únete al server de discord de <b>#AprendeJS</b>, consulta dudas sobre
         Javascript, conoce personas interesadas en este lenguaje y sus
         tecnologías.

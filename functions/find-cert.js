@@ -53,7 +53,10 @@ const embedPDF = ({ name = "Sín nombre", pdfURL, image, url }) => {
     })
     .join("\n")
 
-  return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${title}</title>${metas}<style>body,html {margin: 0;padding: 0;height: 100%;overflow: hidden;}</style></head><body><iframe  width="100%" height="100%" src="${pdfURL}"/></body></html>
+  return `<!DOCTYPE html><html>
+  <head><meta charset="UTF-8"><link rel="icon" type="image/png" href="https://aprendejs.email/favicon.png"/><title>${title}</title>${metas}<style>body,html {margin: 0;padding: 0;height: 100%;overflow: hidden;}</style></head>
+  <body><iframe  width="100%" height="100%" src="${pdfURL}"/></body>
+  </html>
   `
 }
 exports.handler = (event, context, callback) => {

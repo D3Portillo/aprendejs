@@ -2,7 +2,7 @@
   <div class="bg-white w-full">
     <div class="p-8 text-center">
       <div class="font-title text-4xl text-center">
-        📜 Certificados
+        Certificados
       </div>
       <p>
         Listado der personas que han completado exitosamente el curso de
@@ -10,7 +10,7 @@
         <a href="https://d3portillo.me">Denny Portillo</a>
       </p>
     </div>
-    <div class="w-full overflow-x-auto overflow-y-hidden min-h-screen">
+    <div class="w-full overflow-x-auto overflow-y-hidden" style="min-height: 70vh">
       <table class="w-full">
         <tbody>
           <tr v-for="profile in profiles" :key="profile.id">
@@ -51,7 +51,7 @@
     <div class="px-8 text-xs text-center py-12">
       <b>Actividad:</b> Todos los usuarios listados completarón el curso
       realizando una lectura de 20 capítulos con un promedio de 8 minutos por
-      capítulo, y adeás de la realización de ejercicios con ejemplos reales en
+      capítulo, y además de la realización de ejercicios cómo ejemplos reales en
       la vida de un desarrollador web.
     </div>
   </div>
