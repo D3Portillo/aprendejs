@@ -1,9 +1,6 @@
 <template>
   <div class="w-full flex flex-col items-center overflow-hidden">
     <img
-      width="366"
-      height="736"
-      loading="lazy"
       class="w-full"
       style="min-width: 27rem"
       src="/images/swag.jpg"
@@ -17,13 +14,18 @@
         mantenerlo así comprando stickers y swag. Además colaboras en promoverlo
         y así alcanzar mcuhas más personas 🙌.
       </div>
-      <div v-if="!doneLoading" class="text-center py-12 opacity-25 absolute w-full">
-        Cargando...
+      <div class="w-full">
+        <div
+          v-if="!doneLoading"
+          class="text-center py-12 z-1 top-0 opacity-25 absolute w-full"
+        >
+          Cargando...
+        </div>
+        <div
+          id="collection-component-1590880826855"
+          :style="doneLoading || 'filter: blur(30px) hue-rotate(33deg)'"
+        />
       </div>
-      <div
-        id="collection-component-1590880826855"
-        :style="doneLoading || 'filter: blur(15px) hue-rotate(270deg)'"
-      />
     </div>
   </div>
 </template>
@@ -32,9 +34,9 @@ const options = require("../../shopify")
 import { getMetas } from "../../helpers"
 const title = `AprendeJS | Merch 💃`
 export default {
-  data(){
+  data() {
     return {
-      doneLoading: false
+      doneLoading: false,
     }
   },
   head: {

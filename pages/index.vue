@@ -4,14 +4,7 @@
       <div
         class="flex items-center justify-center mb-16 lg:mb-12 pb-12 flex-wrap lg:flex-no-wrap border-b border-darker lg:border-transparent"
       >
-        <img
-          width="250"
-          height="250"
-          loading="lazy"
-          class="h-56"
-          src="/images/logo.png"
-          alt="💡"
-        />
+        <img class="h-56" src="/images/logo.png" alt="💡" />
         <div class="flex-grow text-center lg:text-right">
           <div class="font-title text-4xl">
             AprendeJS
@@ -25,7 +18,7 @@
       </div>
 
       <p>
-        Hola, mi nombre es Denny Portillo.<br />Cuando inicie en el mundo de
+        Hola, mi nombre es Denny Portillo.<br />Cuando inicié en el mundo de
         Javascript, sentí que no sabía lo necesario para poder enseñar a otros a
         hacer código con este lenguaje. Pero es tiempo de compartir lo que sé.
       </p>
@@ -102,14 +95,7 @@
             >
               SUSCRIBIRME
             </div>
-            <img
-              src="/images/button.svg"
-              alt=" "
-              width="488"
-              height="150"
-              loading="lazy"
-              class="bg-black"
-            />
+            <img src="/images/button.svg" alt=" " />
           </button>
         </div>
       </form>

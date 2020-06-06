@@ -20,17 +20,11 @@
             <img
               :style="`filter: hue-rotate(${Math.random() * 360}deg)`"
               src="/images/item-bg.svg"
-              width="800"
-              height="158"
-              loading="lazy"
               class="absolute right-0 bottom-0"
               alt="-.-"
             />
             <td class="py-4 px-8 md:px-16 border-t border-darker z-1">
               <img
-                width="180"
-                height="180"
-                loading="lazy"
                 @load="addZoom"
                 style="cursor: pointer"
                 class="h-24 w-24 object-cover rounded z-20 bg-yellow text-sm shadow-inner"
@@ -44,6 +38,7 @@
             >
               <div class="text-xl mb-4">{{ profile.name }}</div>
               <a
+                no-link
                 style="border-color: #5dd1f9"
                 class="text-xs py-2 px-4 border-2 border-solid rounded whitespace-no-wrap hover:underline"
                 :href="'/certificados/' + profile.id"

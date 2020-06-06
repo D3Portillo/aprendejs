@@ -87,9 +87,7 @@ module.exports = {
         zoom(target).open()
       },
       "animationstart img": (_, target) => {
-        target.loading = "lazy"
         target.style.filter = `blur(10px)`
-        target.setAttribute("loading", "lazy")
       },
       "animationend img": (_, target) => {
         target.style.filter = `blur(0px)`
