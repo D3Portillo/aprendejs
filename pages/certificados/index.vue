@@ -36,7 +36,7 @@
             <td
               class="pb-6 px-8 md:px-16 text-right border-t border-darker z-1"
             >
-              <div class="text-xl mb-4">{{ profile.name }}</div>
+              <div class="text-xl mb-4 whitespace-no-wrap">{{ profile.name }}</div>
               <a
                 no-link
                 style="border-color: #5dd1f9"
