@@ -4,13 +4,13 @@ Aprendé Javascript desde tu email con un contenido previamente preparado y cura
 
 ## Código de conducta
 
-Por favor lee el código de conducta de este proyecto [acá](/D3Portillo/aprendejs/wiki/Código-de-conducta)
+Por favor lee el código de conducta de este proyecto [acá](/wiki/Código-de-conducta)
 
 ## Recursos
 
 - [Únete al discord](https://discord.com/invite/7PyRZ6n)
-- [FAQ / Wiki](https://github.com/D3Portillo/aprendejs/wiki/FAQ)
-- [Licence](/D3Portillo/aprendejs/blob/master/LICENSE)
+- [FAQ / Wiki](/wiki/FAQ)
+- [Licence](/blob/master/LICENSE)
 
 ---
 

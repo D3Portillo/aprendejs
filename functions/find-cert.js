@@ -87,6 +87,7 @@ exports.handler = (event, context, callback) => {
   })
     .then((r) => r.json())
     .then(({ fields }) => {
+      console.log({ fields })
       if (Array.isArray(fields.cert)) {
         const pdf = fields.cert[0]
         callback(null, {
