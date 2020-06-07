@@ -1,19 +1,17 @@
-![LOGO](./static/seo.jpg)
+[![LOGO](./static/seo.jpg)](https://aprendejs.email)
 
-# [AprendeJS](https://aprendejs.email)
-
-Aprendé Javascript desde tu email con un contenido previamente preparado y curado, además al completar recibirás un certificado válido por lo aprendido.
+**Aprendé Javascript** desde tu email con un contenido previamente preparado y curado, además al completar recibirás un certificado válido por lo aprendido.
 
 ## Código de conducta
 
-Por favor lee, respeta y promueve el [código de conducta acá](./wiki/Código-de-conducta) de **AprendeJS**.
+Por favor lee, respeta y promueve el [código de conducta acá](https://github.com/D3Portillo/aprendejs/wiki/Código-de-conducta) de **AprendeJS**.
 
 ## Recursos
 
-- [Código de conducta](./wiki/Código-de-conducta).
+- [Código de conducta](https://github.com/D3Portillo/aprendejs/wiki/Código-de-conducta).
 - [Discord de AprendeJS](https://discord.com/invite/7PyRZ6n)
 - [Licencia del proyecto](/LICENSE)
-- [Wiki y FAQs](./wiki/FAQ)
+- [Wiki y FAQs](https://github.com/D3Portillo/aprendejs/wiki/FAQ)
 
 <a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" /></a>
 
