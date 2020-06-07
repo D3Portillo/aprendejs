@@ -104,5 +104,8 @@ exports.handler = (event, context, callback) => {
         })
       } else voidData()
     })
-    .catch(voidData)
+    .catch(e=>{
+      console.log({error: e})
+      voidData()
+    })
 }
