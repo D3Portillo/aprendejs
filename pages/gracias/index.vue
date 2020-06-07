@@ -19,29 +19,13 @@
 
 <script>
 import zoom from "medium-zoom"
-import { getMetas } from "../../helpers"
+import { getMetas } from "../../functions/find-cert"
 export default {
   head: {
     meta: getMetas({
       title: "AprendeJS | Gracias :)",
       image: "/images/yaay.gif",
     }),
-  },
-  data() {
-    return {
-      profiles: [],
-    }
-  },
-  methods: {
-    addZoom: ({ target = null }) => zoom(target),
-  },
-  mounted() {
-    const _this = this
-    fetch(`https://aprendejs.email/.netlify/functions/certs`)
-      .then((r) => r.json())
-      .then((data) => {
-        _this.profiles = data
-      })
   },
 }
 </script>

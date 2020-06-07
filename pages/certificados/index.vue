@@ -7,7 +7,7 @@
       <p>
         Listado der personas que han completado exitosamente el curso de
         <b>Javascript, nivel intermedio</b> de <b>#AprendeJS</b>, creado por
-        <a href="https://d3portillo.me">Denny Portillo</a>
+        <a title="Ver mi perfil" href="https://d3portillo.me">Denny Portillo</a>
       </p>
     </div>
     <div
@@ -27,6 +27,7 @@
               <img
                 @load="addZoom"
                 style="cursor: pointer"
+                title="Toca para dar zoom"
                 class="h-24 w-24 object-cover rounded z-20 bg-yellow text-sm shadow-inner"
                 :src="profile.picture"
                 :alt="profile.name"
@@ -36,9 +37,12 @@
             <td
               class="pb-6 px-8 md:px-16 text-right border-t border-darker z-1"
             >
-              <div class="text-xl mb-4 whitespace-no-wrap">{{ profile.name }}</div>
+              <div class="text-xl mb-4 whitespace-no-wrap">
+                {{ profile.name }}
+              </div>
               <a
                 no-link
+                :title="`Ver el certificado de: ${profile.name}`"
                 style="border-color: #5dd1f9"
                 class="text-xs py-2 px-4 border-2 border-solid rounded whitespace-no-wrap hover:underline"
                 :href="'/certificados/' + profile.id"
@@ -63,7 +67,7 @@
 
 <script>
 import zoom from "medium-zoom"
-import { getMetas } from "../../helpers"
+import { getMetas } from "../../functions/find-cert"
 export default {
   head: {
     meta: getMetas({ title: "AprendeJS | Certificados" }),
@@ -77,11 +81,10 @@ export default {
     addZoom: ({ target = null }) => zoom(target),
   },
   mounted() {
-    const _this = this
     fetch(`https://aprendejs.email/.netlify/functions/certs`)
       .then((r) => r.json())
       .then((data) => {
-        _this.profiles = data
+        this.profiles = data
       })
   },
 }

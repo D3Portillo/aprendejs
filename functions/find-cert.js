@@ -2,23 +2,72 @@ const fetch = require("node-fetch")
 const { TOKEN = "" } = process.env
 const BASE_URL = `https://api.airtable.com/v0/appU8sXkXLRsB7KVe/AprendeJS%20-%20Certificados`
 const NOT_FOUND_URL = `https://aprendejs.email/certificados/not/found`
-const { getMetas } = require("../helpers")
-const embedPDF = ({ name = "Sín nombre", pdfURL, image, url }) => {
-  const title = `AprendeJS | ${name} ~ Curso completado`
-  const description = `${name} ha completado con éxito el curso de 20 capítulos #AprendeJS, via: https://aprendejs.email`
-  const metas = getMetas({ title, description, image, url })
-    .map(({ name, content }) => {
-      return `<meta name="${name}" content="${content}"/>`
-    })
-    .join("\n")
+exports.getMetas = ({
+  title = `AprendeJS`,
+  description = `Aprendé Javascript desde tu email con un contenido previamente preparado y curado, además al completar recibirás un certificado válido por lo aprendido.`,
+  image = "/seo.jpg",
+  url = "https://aprendejs.email",
+}) => {
+  return [
+    {
+      name: "author",
+      content: "AprendeJS",
+    },
+    {
+      name: "keywords",
+      content: "javascript,aprendejs,coding,newsletter",
+    },
+    {
+      name: "description",
+      content: description,
+    },
+    {
+      name: "og:title",
+      content: title,
+    },
+    {
+      name: "og:description",
+      content: description,
+    },
+    {
+      name: "og:image",
+      content: image,
+    },
+    {
+      name: "og:url",
+      content: url,
+    },
 
-  return `<!DOCTYPE html><html>
-  <head><meta charset="UTF-8"><link rel="icon" type="image/png" href="https://aprendejs.email/favicon.png"/><title>${title}</title>${metas}<style>body,html {margin: 0;padding: 0;height: 100%;overflow: hidden;}</style></head>
-  <body><iframe  width="100%" height="100%" src="${pdfURL}"/></body>
-  </html>
-  `
+    {
+      name: "twitter:card",
+      content: description,
+    },
+    {
+      name: "og:site_name",
+      content: title,
+    },
+    {
+      name: "twitter:image:alt",
+      content: url,
+    },
+  ]
 }
 exports.handler = (event, context, callback) => {
+  const embedPDF = ({ name = "Sín nombre", pdfURL, image, url }) => {
+    const title = `AprendeJS | ${name} ~ Curso completado`
+    const description = `${name} ha completado con éxito el curso de 20 capítulos #AprendeJS, via: https://aprendejs.email`
+    const metas = getMetas({ title, description, image, url })
+      .map(({ name, content }) => {
+        return `<meta name="${name}" content="${content}"/>`
+      })
+      .join("\n")
+
+    return `<!DOCTYPE html><html>
+    <head><meta charset="UTF-8"><link rel="icon" type="image/png" href="https://aprendejs.email/favicon.png"/><title>${title}</title>${metas}<style>body,html {margin: 0;padding: 0;height: 100%;overflow: hidden;}</style></head>
+    <body><iframe  width="100%" height="100%" src="${pdfURL}"/></body>
+    </html>
+    `
+  }
   const voidData = () => {
     callback(null, {
       statusCode: 302,

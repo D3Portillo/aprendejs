@@ -25,7 +25,7 @@
 
 <script>
 import zoom from "medium-zoom"
-import { getMetas } from "../../helpers"
+import { getMetas } from "../../functions/find-cert"
 export default {
   head: {
     meta: getMetas({ title: "AprendeJS | Discord", image: "/seo-discord.jpg" }),

@@ -28,8 +28,8 @@
         con un URL personalizado.
       </p>
       <p>
-        Cada email está pensado para dedicar una lectura de aproximadamente 7 ~
-        10 minutos.
+        Cada email está pensado para dedicar una lectura de aproximadamente
+        <b>7 ~ 10 minutos.</b>
       </p>
       <p>
         Ciertos capítulos incluíran ejercicios, guías y “tests” para aumentar el
@@ -45,12 +45,13 @@
         tu correo.
       </p>
       <p>
-        Mirar el contenido del curso
-        <b
-          ><a href="https://github.com/D3Portillo/aprendejs/wiki/Contenido"
-            >acá</a
-          ></b
-        >.
+        Hay <b>{{ suscribed }}</b> personas actualmente suscritas 🥰. Mira el
+        contenido del curso
+        <a
+          title="Mirar el contenido del curso"
+          href="https://github.com/D3Portillo/aprendejs/wiki/Contenido"
+          >acá.</a
+        >
       </p>
       <form
         @submit="handleRequest"
@@ -89,7 +90,11 @@
         />
 
         <div class="bg-white px-2 bg-white absolute right-0 mr-2 lg:mr-8">
-          <button type="submit" class="w-48 md:w-56 cursor-pointer cta">
+          <button
+            title="¡Quiero aprender Javascript!"
+            type="submit"
+            class="w-48 md:w-56 cursor-pointer cta"
+          >
             <div
               class="absolute font-bold lg:text-xl inset-0 flex items-center justify-center text-white z-1"
             >
@@ -104,6 +109,7 @@
       >
         Powered by
         <a
+          title="Apoyame con referrals"
           href="https://emailoctopus.com/?urli=NmBql&amp;utm_medium=user_referral&amp;utm_source=builder"
           target="_blank"
           >🐙 EmailOctopus</a
@@ -114,9 +120,14 @@
 </template>
 
 <script>
-import { getMetas } from "../helpers"
+import { getMetas } from "../functions/find-cert"
 const title = `AprendeJS | Home`
 export default {
+  data() {
+    return {
+      suscribed: 0,
+    }
+  },
   head: {
     meta: getMetas({ title }),
     title,
@@ -141,6 +152,13 @@ export default {
         })
         .catch(console.error)
     },
+  },
+  mounted() {
+    fetch(`https://aprendejs.email/.netlify/functions/suscribed`)
+      .then((r) => r.json())
+      .then(({ total = 0 }) => {
+        this.suscribed = total
+      })
   },
 }
 </script>

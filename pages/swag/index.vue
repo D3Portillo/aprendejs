@@ -31,7 +31,7 @@
 </template>
 <script>
 const options = require("../../shopify")
-import { getMetas } from "../../helpers"
+import { getMetas } from "../../functions/find-cert"
 const title = `AprendeJS | Merch 💃`
 export default {
   data() {
