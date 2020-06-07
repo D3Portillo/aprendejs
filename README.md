@@ -1,12 +1,12 @@
 # AprendeJS
 
+![LOGO](./static/seo.jpg)
+
 Aprendé Javascript desde tu email con un contenido previamente preparado y curado, además al completar recibirás un certificado válido por lo aprendido.
 
 ## Código de conducta
 
 Por favor lee, respeta y promueve el [código de conducta acá](./wiki/Código-de-conducta) de **AprendeJS**.
-
-
 
 ## Recursos
 
@@ -23,6 +23,4 @@ Por favor lee, respeta y promueve el [código de conducta acá](./wiki/Código-d
 
 ---
 
-<a href="https://www.netlify.com">
-<img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify" />
-</a>
+<a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" /></a>
