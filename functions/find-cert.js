@@ -53,6 +53,7 @@ exports.getMetas = ({
   ]
 }
 exports.handler = (event, context, callback) => {
+  console.log({ event, context })
   const embedPDF = ({ name = "Sín nombre", pdfURL, image, url }) => {
     const title = `AprendeJS | ${name} ~ Curso completado`
     const description = `${name} ha completado con éxito el curso de 20 capítulos #AprendeJS, via: https://aprendejs.email`
@@ -78,6 +79,7 @@ exports.handler = (event, context, callback) => {
   }
   const id = event.path.split("/").pop()
   const URL = `${BASE_URL}/${id}`
+  console.log(URL)
   fetch(URL, {
     headers: {
       Authorization: `Bearer ${TOKEN}`,

@@ -10,6 +10,7 @@ Por favor lee el código de conducta de este proyecto [acá](/D3Portillo/aprende
 
 - [Únete al discord](https://discord.com/invite/7PyRZ6n)
 - [FAQ / Wiki](https://github.com/D3Portillo/aprendejs/wiki/FAQ)
+- [Licence](/D3Portillo/aprendejs/blob/master/LICENSE)
 
 ---
 
