@@ -45,5 +45,8 @@ exports.handler = (event, context, callback) => {
         ),
       })
     )
-    .catch(voidData)
+    .catch((error) => {
+      console.log({ error })
+      voidData()
+    })
 }
