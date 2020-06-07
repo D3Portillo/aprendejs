@@ -18,6 +18,10 @@ a {
 a:not([no-link]):hover {
   @apply border-black;
 }
+.cta,
+a[no-link] {
+  display: block;
+}
 .cta:hover,
 a[no-link]:hover {
   transform: scale(1.03);
@@ -33,10 +37,10 @@ input:invalid:focus {
 a:not([no-link])::before {
   content: "";
   height: 50%;
-  width:  100%;
+  width: 100%;
   z-index: -1;
   margin-bottom: 1px;
-  opacity: .2;
+  opacity: 0.2;
   @apply bg-yellow bottom-0 left-0 absolute;
 }
 

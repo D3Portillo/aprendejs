@@ -47,11 +47,12 @@
       <p>
         <a href="https://netlify.com">
           <img
+          class="w-32"
             src="https://netlify.com/img/global/badges/netlify-color-accent.svg"
             alt="Deploys by Netlify"
           />
         </a>
-        <i class="text-xs">Powered by Netlify</i>
+        <i class="text-xs">Deployed with Netlify</i>
       </p>
       <p>
         Actualmente hay <b>{{ suscribed }} estudiantes</b> suscritos al curso de
