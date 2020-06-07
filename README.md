@@ -4,13 +4,16 @@ Aprendé Javascript desde tu email con un contenido previamente preparado y cura
 
 ## Código de conducta
 
-Por favor lee el código de conducta de este proyecto [acá](/wiki/Código-de-conducta)
+Por favor lee, respeta y promueve el [código de conducta acá](./wiki/Código-de-conducta) de **AprendeJS**.
+
+
 
 ## Recursos
 
-- [Únete al discord](https://discord.com/invite/7PyRZ6n)
-- [FAQ / Wiki](/wiki/FAQ)
-- [Licence](/blob/master/LICENSE)
+- [Código de conducta](./wiki/Código-de-conducta).
+- [Discord de AprendeJS](https://discord.com/invite/7PyRZ6n)
+- [Licencia del proyecto](/LICENSE)
+- [Wiki y FAQs](./wiki/FAQ)
 
 ---
 
@@ -21,5 +24,5 @@ Por favor lee el código de conducta de este proyecto [acá](/wiki/Código-de-co
 ---
 
 <a href="https://www.netlify.com">
-<img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" />
+<img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify" />
 </a>

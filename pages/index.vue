@@ -45,13 +45,34 @@
         tu correo.
       </p>
       <p>
-        Hay <b>{{ suscribed }}</b> personas actualmente suscritas 🥰. Mira el
-        contenido del curso
+        <a href="https://netlify.com">
+          <img
+            src="https://netlify.com/img/global/badges/netlify-color-accent.svg"
+            alt="Deploys by Netlify"
+          />
+        </a>
+        <i class="text-xs">Powered by Netlify</i>
+      </p>
+      <p>
+        Actualmente hay <b>{{ suscribed }} estudiantes</b> suscritos al curso de
+        AprendeJS 🥰. Si aún no te animas a suscribirte, mira el contenido del
+        curso
         <a
           title="Mirar el contenido del curso"
           href="https://github.com/D3Portillo/aprendejs/wiki/Contenido"
-          >acá.</a
+          >acá</a
+        >, quizá te anime : )
+      </p>
+      <p>
+        Te pido respetes el
+        <a
+          href="https://github.com/D3Portillo/aprendejs/wiki/C%C3%B3digo-de-conducta"
+          >código de conducta de AprendeJS</a
         >
+        para mantenerte cómo estudiante activo dentro del curso. Además para
+        hacer networking puedes unirte al
+        <a href="https://discord.gg/7PyRZ6n">server de discord</a> dónde podemos
+        charlar un poco sobre Javascript u otro tema de tú interés.
       </p>
       <form
         @submit="handleRequest"
@@ -107,7 +128,7 @@
       <div
         class="email-octopus-rewards text-xs opacity-0 sm:opacity-25 cursor-default mt-2 mb-24"
       >
-        Powered by
+        Mailing por
         <a
           title="Apoyame con referrals"
           href="https://emailoctopus.com/?urli=NmBql&amp;utm_medium=user_referral&amp;utm_source=builder"

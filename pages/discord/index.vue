@@ -5,9 +5,9 @@
         Discord
       </div>
       <p class="text-center">
-        Únete al server de discord de <b>#AprendeJS</b>, consulta dudas sobre
-        Javascript, conoce personas interesadas en este lenguaje y sus
-        tecnologías.
+        Únete al <a href="https://discord.gg/7PyRZ6n">server de discord</a> de
+        <b>#AprendeJS</b>, consulta dudas sobre Javascript, conoce personas
+        interesadas en este lenguaje y sus tecnologías.
       </p>
     </div>
     <div class="px-4 pb-4">
