@@ -17,6 +17,4 @@ Por favor lee, respeta y promueve el [código de conducta acá](https://github.c
 
 ---
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d502cb9f-26aa-442f-ac41-8e81b6bf9f8e/deploy-status)](https://app.netlify.com/sites/aprendejs/deploys)
-
-[![Discord](https://img.shields.io/discord/716223433264070696?color=7289da&label=Discord&logo=discord&logoColor=7289da)](https://discord.com/invite/7PyRZ6n)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d502cb9f-26aa-442f-ac41-8e81b6bf9f8e/deploy-status)](https://app.netlify.com/sites/aprendejs/deploys) [![Discord](https://img.shields.io/discord/716223433264070696?color=7289da&label=Discord&logo=discord&logoColor=7289da)](https://discord.com/invite/7PyRZ6n)
