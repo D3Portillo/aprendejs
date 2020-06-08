@@ -13,7 +13,7 @@ Por favor lee, respeta y promueve el [código de conducta acá](https://github.c
 - [Licencia del proyecto](/LICENSE)
 - [Wiki y FAQs](https://github.com/D3Portillo/aprendejs/wiki/FAQ)
 
-<a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" /></a>
+> <a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" /></a>
 
 ---
 
