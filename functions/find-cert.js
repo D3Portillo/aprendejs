@@ -9,6 +9,9 @@ const getMetas = ({
   url = "https://aprendejs.email",
 }) => {
   const TWITTER_USER = `AprendeJS`
+  if (!image.startsWith("http")) {
+    image = `https://${`aprendejs.email/${image}`.replace(/\/+/g, "/")}`
+  }
   return [
     {
       name: "author",
