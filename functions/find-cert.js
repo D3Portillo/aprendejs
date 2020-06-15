@@ -22,6 +22,10 @@ const getMetas = ({
       content: description,
     },
     {
+      name: "og:type",
+      content: "article",
+    },
+    {
       name: "og:title",
       content: title,
     },
@@ -44,6 +48,10 @@ const getMetas = ({
     {
       name: "twitter:card",
       content: "summary",
+    },
+    {
+      name: "twitter:image",
+      content: image,
     },
     {
       name: "twitter:site",
