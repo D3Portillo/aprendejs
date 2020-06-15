@@ -8,10 +8,11 @@ const getMetas = ({
   image = "/seo.jpg",
   url = "https://aprendejs.email",
 }) => {
+  const TWITTER_USER = `AprendeJS`
   return [
     {
       name: "author",
-      content: "AprendeJS",
+      content: TWITTER_USER,
     },
     {
       name: "keywords",
@@ -47,7 +48,7 @@ const getMetas = ({
     },
     {
       name: "twitter:card",
-      content: "summary",
+      content: "summary_large_image",
     },
     {
       name: "twitter:image",
@@ -55,7 +56,11 @@ const getMetas = ({
     },
     {
       name: "twitter:site",
-      content: "Aprendejs",
+      content: TWITTER_USER,
+    },
+    {
+      name: "twitter:creator",
+      content: TWITTER_USER,
     },
     {
       name: "twitter:image:alt",
