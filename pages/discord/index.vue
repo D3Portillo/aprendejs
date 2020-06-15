@@ -26,9 +26,14 @@
 <script>
 import zoom from "medium-zoom"
 import { getMetas } from "../../functions/find-cert"
+const description = `Únete server de #AprendeJS y conoce personas interesadas sobre javascript y sus tecnologías.`
 export default {
   head: {
-    meta: getMetas({ title: "AprendeJS | Discord", image: "/seo-discord.jpg" }),
+    meta: getMetas({
+      title: "AprendeJS | Discord",
+      image: "/seo-discord.jpg",
+      description,
+    }),
   },
   data() {
     return {

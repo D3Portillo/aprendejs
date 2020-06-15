@@ -20,11 +20,13 @@
 <script>
 import zoom from "medium-zoom"
 import { getMetas } from "../../functions/find-cert"
+const description = `Gracias por registrarte al curso 💕`
 export default {
   head: {
     meta: getMetas({
       title: "AprendeJS | Gracias :)",
       image: "/images/yaay.gif",
+      description
     }),
   },
 }

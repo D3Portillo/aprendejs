@@ -68,9 +68,10 @@
 <script>
 import zoom from "medium-zoom"
 import { getMetas } from "../../functions/find-cert"
+const description = `Listado der personas que han completado exitosamente el curso de #AprendeJS`
 export default {
   head: {
-    meta: getMetas({ title: "AprendeJS | Certificados" }),
+    meta: getMetas({ title: "AprendeJS | Certificados", description }),
   },
   data() {
     return {

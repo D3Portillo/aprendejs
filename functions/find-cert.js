@@ -37,14 +37,17 @@ const getMetas = ({
       name: "og:url",
       content: url,
     },
-
-    {
-      name: "twitter:card",
-      content: description,
-    },
     {
       name: "og:site_name",
       content: title,
+    },
+    {
+      name: "twitter:card",
+      content: "summary",
+    },
+    {
+      name: "twitter:site",
+      content: "Aprendejs",
     },
     {
       name: "twitter:image:alt",
