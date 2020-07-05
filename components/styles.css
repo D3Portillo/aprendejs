@@ -5,6 +5,7 @@
 * {
   font-family: "Open Sans", sans-serif;
   position: relative;
+  outline: none;
 }
 body {
   background-color: #eeeeee;
@@ -17,10 +18,6 @@ a {
 }
 a:not([no-link]):hover {
   @apply border-black;
-}
-.cta,
-a[no-link] {
-  display: block;
 }
 .cta:hover,
 a[no-link]:hover {

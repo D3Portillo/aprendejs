@@ -6,9 +6,9 @@
       >
         <img class="h-56" src="/images/logo.png" alt="💡" />
         <div class="flex-grow text-center lg:text-right">
-          <div class="font-title text-4xl">
+          <h1 class="font-title text-4xl">
             AprendeJS
-          </div>
+          </h1>
           <div class="text-sm">
             Aprendé <b>Javascript</b> desde tu email con un contenido
             previamente preparado y curado, además al completar recibirás un
@@ -47,7 +47,7 @@
       <p>
         <a href="https://netlify.com">
           <img
-          class="w-32"
+            class="w-32"
             src="https://netlify.com/img/global/badges/netlify-color-accent.svg"
             alt="Deploys by Netlify"
           />
@@ -111,7 +111,7 @@
           class="bg-whiter w-full p-2 mb-16 font-bold"
         />
 
-        <div class="bg-white px-2 bg-white absolute right-0 mr-2 lg:mr-8">
+        <div class="bg-white px-2 absolute right-0 mr-2 lg:mr-8">
           <button
             title="¡Quiero aprender Javascript!"
             type="submit"
@@ -122,7 +122,7 @@
             >
               SUSCRIBIRME
             </div>
-            <img src="/images/button.svg" alt=" " />
+            <img src="/images/button.svg" alt="-.-" />
           </button>
         </div>
       </form>
@@ -172,7 +172,7 @@ export default {
         .then(() => {
           window.location.href = "/gracias"
         })
-        .catch(console.error)
+        .catch(console.info)
     },
   },
   mounted() {

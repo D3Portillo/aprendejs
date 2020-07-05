@@ -9,7 +9,7 @@
           class="bg-white sm:bg-whiter border-t border-whiter sm:border-none w-full pb-4"
         >
           <div class="flex max-w-2xl mx-auto w-full px-8 pt-24 pb-20 items-end">
-            <div class="flex sm:items-center flex-col sm:flex-row flex-col-reverse">
+            <div class="flex sm:items-center sm:flex-row flex-col-reverse">
               <a
                 href="https://d3portillo.me"
                 no-link
@@ -24,13 +24,13 @@
                 title="AprendeJS está en Netlify"
               >
                 <img
-                  class="h-12 rounded shadow-inner"
-                  src="https://www.netlify.com/img/global/badges/netlify-light.svg"
+                  class="h-12 border border-darker py-1 px-2 rounded"
+                  src="/images/netlify-light.svg"
                   alt="Deploys by Netlify"
                 />
               </a>
             </div>
-            <div class="flex-grow flex flex-col items-end text-sm">
+            <div class="flex-grow flex flex-col items-end">
               <a
                 href="https://github.com/D3Portillo/aprendejs/wiki/FAQ"
                 target="_blank"

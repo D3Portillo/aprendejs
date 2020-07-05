@@ -5,12 +5,12 @@
   },
   "dependencies": {
     "medium-zoom": "^1.0.5",
-    "node-fetch": "^2.6.0",
-    "saber": "^0.11.7",
-    "tailwindcss": "^1.4.6"
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.0"
+    "autoprefixer": "^9.8.0",
+    "saber": "^0.11.7",
+    "tailwindcss": "^1.4.6"
   },
   "browserslist": [
     "defaults"

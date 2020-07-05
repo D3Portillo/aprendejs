@@ -5,7 +5,7 @@
       src="/images/banner.svg"
       alt="ApredeJS"
     />
-    <img class="w-full" src="/images/yaay.gif" alt="TY" />
+    <img class="w-full" src="/images/yaay.gif" alt="Yaaay!" />
     <div class="mx-auto max-w-2xl text-sm px-8 pb-2 pt-1">
       <p>
         <b>Yaay estás dentro : )</b> , pero... para para iniciar a recibir

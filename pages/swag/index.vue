@@ -4,7 +4,7 @@
       class="w-full"
       style="min-width: 27rem"
       src="/images/swag.jpg"
-      alt="Banner"
+      alt="SWAG/MERCH"
     />
     <div class="bg-white min-h-screen">
       <div
