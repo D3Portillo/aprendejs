@@ -10,9 +10,15 @@
             AprendeJS
           </h1>
           <div class="text-sm">
-            Aprendé <b>Javascript</b> desde tu email con un contenido
-            previamente preparado y curado, además al completar recibirás un
-            certificado válido por lo aprendido.
+            Aprendé
+            <b
+              class="cursor-default"
+              title="Soy un Frontend, me encata JS(La mayoría del tiempo). Por eso creé AprendeJS :)"
+              >Javascript</b
+            >
+            desde tu email con un contenido previamente preparado y curado,
+            además al completar recibirás un certificado válido por lo
+            aprendido.
           </div>
         </div>
       </div>
@@ -96,6 +102,7 @@
         <input
           required
           type="text"
+          id="field_1"
           name="field_1"
           placeholder="Juan Doe"
           class="bg-whiter w-full p-2 font-bold"
@@ -106,6 +113,7 @@
         <input
           required
           type="email"
+          id="field_0"
           name="field_0"
           placeholder="usuario@email.com"
           class="bg-whiter w-full p-2 mb-16 font-bold"

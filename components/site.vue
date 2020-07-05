@@ -30,16 +30,27 @@
                 />
               </a>
             </div>
-            <div class="flex-grow flex flex-col items-end">
+            <div class="flex-grow flex flex-col items-end text-lg">
               <a
+                title="Preguntas frecuentes"
                 href="https://github.com/D3Portillo/aprendejs/wiki/FAQ"
                 target="_blank"
                 >FAQ</a
               >
-              <router-link to="/discord">Discord</router-link>
-              <router-link to="/">Inicio / Home</router-link>
-              <router-link to="/swag">Stickers & Swag</router-link>
-              <router-link to="/certificados">Certificados</router-link>
+              <router-link title="Ver el Discord" to="/discord"
+                >Discord</router-link
+              >
+              <router-link title="Volver al inicio" to="/"
+                >Inicio / Home</router-link
+              >
+              <router-link title="Swag/Merch" to="/swag"
+                >Stickers & Swag</router-link
+              >
+              <router-link
+                title="Reonocimientos por terminar el curso"
+                to="/certificados"
+                >Certificados</router-link
+              >
             </div>
           </div>
         </div>
@@ -48,7 +59,8 @@
         </div>
       </div>
       <div
-        class="flex items-center justify-center sm:px-8 mt-10 sm:mt-24 mb-10 text-xs"
+        title="Y Lagrimas :("
+        class="flex items-center justify-center sm:px-8 mt-10 sm:mt-24 mb-10 text-xs cursor-pointer"
         style="letter-spacing: 1rem"
       >
         HECHO CON
